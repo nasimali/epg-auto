@@ -34,6 +34,7 @@ jobs:
           git push -u origin temp-epg-update
           git fetch origin
           git checkout release/main-epg
+          git pull
           git merge -X ours temp-epg-update --allow-unrelated-histories
           git add .
           git commit -m "merge temp-epg-update into release/main-epg"
