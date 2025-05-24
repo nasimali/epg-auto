@@ -8,7 +8,7 @@ import json
 os.makedirs("epg_data", exist_ok=True)
 
 with open("channels.json", "r") as f:
-    sky_channels = json.load(f)
+    sids = json.load(f)
 
 EPG_API_URL = "https://awk.epgsky.com/hawk/linear/schedule"
 TIMEZONE = pytz.timezone("Europe/London")
@@ -20,13 +20,12 @@ dates = [
 
 tv = ET.Element("tv", attrib={"generator-info-name": "epg-custom"})
 
-for name, info in sky_channels.items():
-    ch_elem = ET.SubElement(tv, "channel", id=info["tvg-id"])
-    ET.SubElement(ch_elem, "display-name").text = name
+for sid in sids:
+    ch_elem = ET.SubElement(tv, "channel", id=sid)
+    ET.SubElement(ch_elem, "display-name").text = f"Channel {sid}"
 
-for name, info in sky_channels.items():
-    sid = info["sid"]
-    tvg_id = info["tvg-id"]
+for sid in sids:
+    tvg_id = sid 
 
     for date in dates:
         try:
@@ -34,7 +33,13 @@ for name, info in sky_channels.items():
             response = requests.get(url)
             response.raise_for_status()
             data = response.json()
-            events = data.get("schedule", [])[0].get("events", [])
+            schedule = data.get("schedule", [])
+
+            if not schedule or not schedule[0].get("events"):
+                print(f"SID {sid} did not return valid EPG data — skipping.")
+                continue
+
+            events = schedule[0]["events"]
 
             for ev in events:
                 start = datetime.fromtimestamp(ev["st"] + (3600 if TIMEZONE.localize(datetime.fromtimestamp(ev["st"])).dst().total_seconds() != 0 else 0), tz=TIMEZONE)
@@ -60,10 +65,7 @@ for name, info in sky_channels.items():
                     ET.SubElement(rating, "value").text = ev["r"]
 
                 if ev.get("new"):
-                    ET.SubElement(prog, "new")
-
-                if info.get("logo"):
-                    ET.SubElement(ch_elem, "icon", src=info["logo"])    
+                    ET.SubElement(prog, "new")  
 
         except Exception as e:
             print(f"Failed to fetch or parse EPG for {name} on {date}: {e}")
