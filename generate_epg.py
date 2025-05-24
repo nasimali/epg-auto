@@ -42,7 +42,7 @@ for sid in sids:
             events = schedule[0]["events"]
 
             for ev in events:
-                start = datetime.fromtimestamp(ev["st"] + (3600 if TIMEZONE.localize(datetime.fromtimestamp(ev["st"])).dst().total_seconds() != 0 else 0), tz=TIMEZONE)
+                start = datetime.fromtimestamp(ev["st"]
                 end = start + timedelta(seconds=ev["d"])
                 start_str = start.strftime('%Y%m%d%H%M%S %z')
                 end_str = end.strftime('%Y%m%d%H%M%S %z')
