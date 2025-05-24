@@ -19,7 +19,9 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install requests
+          pip install requests pytz
 
       - name: Run EPG generator script
         run: python generate_epg.py
