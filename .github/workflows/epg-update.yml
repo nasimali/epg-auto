@@ -2,32 +2,34 @@ name: Update EPG File
 
 on:
   schedule:
-    - cron: '0 0 */3 * *'
-  workflow_dispatch:
+    - cron: "0 0 */3 * *" # Every 72 hours
+  workflow_dispatch: # Allow manual trigger too
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-    - name: Install dependencies
-      run: pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-    - name: Run EPG generator script
-      run: python generate_epg.py
+      - name: Run EPG generator script
+        run: python generate_epg.py
 
-    - name: Commit and push updated EPG
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add merged_epg.xml
-        git commit -m "Update EPG file [automated]" || echo "No changes to commit"
-        git push
+      - name: Commit and push to release/main-epg
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin
+          git switch --force-create release/main-epg || git checkout release/main-epg
+          git add epg_data/merged_epg.xml
+          git commit -m "chore(epg): update merged_epg.xml [automated]" || echo "No changes"
+          git push origin release/main-epg
