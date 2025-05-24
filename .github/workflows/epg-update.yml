@@ -28,8 +28,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin
-          git switch --force-create release/main-epg || git checkout release/main-epg
+          git fetch origin release/main-epg
+          git checkout release/main-epg || git switch --create release/main-epg origin/release/main-epg
+          git pull origin release/main-epg --rebase
           git add epg_data/merged_epg.xml
           git commit -m "chore(epg): update merged_epg.xml [automated]" || echo "No changes"
           git push origin release/main-epg
