@@ -62,6 +62,9 @@ for name, info in sky_channels.items():
                 if ev.get("new"):
                     ET.SubElement(prog, "new")
 
+                if info.get("logo"):
+                    ET.SubElement(ch_elem, "icon", src=info["logo"])    
+
         except Exception as e:
             print(f"Failed to fetch or parse EPG for {name} on {date}: {e}")
 

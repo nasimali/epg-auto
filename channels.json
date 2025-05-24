@@ -1,12 +1,52 @@
 {
-  "ATN Bangla UK": { "sid": "6753", "tvg-id": "12114" },
-  "TV One UK": { "sid": "5426", "tvg-id": "12535" },
-  "Islam Bangla": { "sid": "1104", "tvg-id": "12423" },
-  "Deen TV": { "sid": "1235", "tvg-id": "12071" },
-  "Iqra Bangla": { "sid": "3914", "tvg-id": "12445" },
-  "NTV Europe UK": { "sid": "4540", "tvg-id": "12244" },
-  "ION TV": { "sid": "4461", "tvg-id": "60504" },
-  "CHSTV": { "sid": "3815", "tvg-id": "12504" },
-  "Geo TV": { "sid": "4110", "tvg-id": "12507" },
-  "Hum TV": { "sid": "5205", "tvg-id": "12446" }
+  "ATN Bangla UK": {
+    "sid": "6753",
+    "tvg-id": "12114",
+    "logo": "https://image.winudf.com/v2/image/Y29tLm1jYy5hdG5iYW5nbGF1a2xpdmVfaWNvbl8wXzVkMzEwZGJh/icon.png?w=184&fakeurl=1"
+  },
+  "TV One UK": {
+    "sid": "5426",
+    "tvg-id": "12535",
+    "logo": "https://www.tvoneuk.tv/wp-content/uploads/2021/06/TVONE-LOGO-Colour.png"
+  },
+  "Islam Bangla": {
+    "sid": "1104",
+    "tvg-id": "12423",
+    "logo": "https://www.islamchanneleid.com/img/client_logos/icBan.png"
+  },
+  "Deen TV": {
+    "sid": "1235",
+    "tvg-id": "12071",
+    "logo": "https://deentv.uk/wp-content/uploads/2025/04/DENE-TV-LOGO-FOR-QR-1.png"
+  },
+  "Iqra Bangla": {
+    "sid": "3914",
+    "tvg-id": "12445",
+    "logo": "https://iqra.tv/wp-content/uploads/2019/12/Iqra-Logo-Web-01.png"
+  },
+  "NTV Europe UK": {
+    "sid": "4540",
+    "tvg-id": "12244",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/NTV_%28Bangladesh%29_logo.svg/1200px-NTV_%28Bangladesh%29_logo.svg.png"
+  },
+  "ION TV": {
+    "sid": "4461",
+    "tvg-id": "60504",
+    "logo": "https://res.cloudinary.com/clearlink/image/upload/f_auto,q_auto/w_640,h_400/v1589301664/Dish/images/isolated/~png-logo-exports-for-channel-page-hero/Ion-Default-Black_2x_ty12yi.png"
+  },
+  "CHSTV": {
+    "sid": "3815",
+    "tvg-id": "12504",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Channel_S_Logo.SVG/800px-Channel_S_Logo.SVG.png"
+  },
+  "Geo TV": {
+    "sid": "4110",
+    "tvg-id": "12507",
+    "logo": "https://cdn.skymedia.co.uk/wp-content/uploads/2017/12/Geo-TV.png"
+  },
+  "Hum TV": {
+    "sid": "5205",
+    "tvg-id": "12446",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png"
+  }
 }
