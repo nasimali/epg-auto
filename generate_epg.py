@@ -37,7 +37,7 @@ for name, info in sky_channels.items():
             events = data.get("schedule", [])[0].get("events", [])
 
             for ev in events:
-                start = datetime.fromtimestamp(ev["st"], tz=TIMEZONE)
+                start = datetime.fromtimestamp(ev["st"] + (3600 if TIMEZONE.localize(datetime.fromtimestamp(ev["st"])).dst().total_seconds() != 0 else 0), tz=TIMEZONE)
                 end = start + timedelta(seconds=ev["d"])
                 start_str = start.strftime('%Y%m%d%H%M%S %z')
                 end_str = end.strftime('%Y%m%d%H%M%S %z')
