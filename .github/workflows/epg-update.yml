@@ -31,8 +31,9 @@ jobs:
           git checkout -b temp-epg-update
           git add epg_data/merged_epg.xml
           git commit -m "chore(epg): update merged_epg.xml [automated]" || echo "No changes"
-          git fetch origin release/main-epg
-          git checkout release/main-epg
-          git merge temp-epg-update --allow-unrelated-histories --strategy=ours --no-edit
+          git push -u origin temp-epg-update
+          git fetch origin
+          git switch --force-create release/main-epg || git checkout release/main-epg
+          git merge temp-epg-update
           git push origin release/main-epg
           git branch -D temp-epg-update
