@@ -14,8 +14,9 @@ epg_channels = {
     "12445": "Iqra Bangla",
     "12244": "NTV Europe UK",
     "60504": "ION TV",
-    "9363": "Geo Entertainment",
-    "9364": "Hum TV"
+    "12504": "CHSTV",
+    "12507": "Geo Entertainment",
+    "12446": "Hum TV"
 }
 
 tv = ET.Element("tv")
