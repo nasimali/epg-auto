@@ -1,6 +1,6 @@
 # 📺 EPG Auto-Generator (Every 72 Hours)
 
-This repository automatically fetches and merges EPG (Electronic Program Guide) data for a set of IPTV channels using [epg.pw](https://epg.pw), then pushes the result as a single `merged_epg.xml` file.
+This repository automatically fetches and merges EPG (Electronic Program Guide) data for a set of IPTV channels, then pushes the result as a single `merged_epg.xml` file.
 
 ### ✅ Included Channels
 
@@ -11,10 +11,9 @@ This repository automatically fetches and merges EPG (Electronic Program Guide) 
 - Iqra Bangla
 - NTV Europe UK
 - ION TV
+- CH S UK
 - Geo Entertainment
 - Hum TV
-
-> Channel S UK is currently excluded due to lack of reliable XMLTV source.
 
 ---
 
@@ -23,7 +22,7 @@ This repository automatically fetches and merges EPG (Electronic Program Guide) 
 A GitHub Actions workflow (`.github/workflows/epg-update.yml`) runs:
 
 - ⏱️ **Every 72 hours**
-- 🧰 Fetches latest EPGs from `epg.pw`
+- 🧰 Fetches latest EPGs from web
 - 🗂️ Merges them into a single XMLTV file
 - 🚀 Pushes `merged_epg.xml` back to this repo
 
@@ -35,3 +34,4 @@ A GitHub Actions workflow (`.github/workflows/epg-update.yml`) runs:
 2. Push to your own GitHub account
 3. The action will run automatically (or you can trigger it manually)
 4. Grab the raw link to `merged_epg.xml`, for example:
+   [Click here to view or use the raw XMLTV file](https://raw.githubusercontent.com/nasimali/epg-auto/release/main-epg/epg_data/merged_epg.xml)
