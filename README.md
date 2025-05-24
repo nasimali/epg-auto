@@ -1,4 +1,4 @@
-# 📺 EPG Auto-Generator (Every 72 Hours)
+# 📺 EPG Auto-Generator (Every 24 Hours)
 
 This repository automatically fetches and merges EPG (Electronic Program Guide) data for a set of IPTV channels, then pushes the result as a single `merged_epg.xml` file.
 
@@ -21,7 +21,7 @@ This repository automatically fetches and merges EPG (Electronic Program Guide) 
 
 A GitHub Actions workflow (`.github/workflows/epg-update.yml`) runs:
 
-- ⏱️ **Every 72 hours**
+- ⏱️ **Every 24 hours**
 - 🧰 Fetches latest EPGs from web
 - 🗂️ Merges them into a single XMLTV file
 - 🚀 Pushes `merged_epg.xml` back to this repo
