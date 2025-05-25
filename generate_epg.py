@@ -68,7 +68,7 @@ for sid in sids:
                     ET.SubElement(prog, "new")  
 
         except Exception as e:
-            print(f"Failed to fetch or parse EPG for {name} on {date}: {e}")
+            print(f"Failed to fetch or parse EPG for {sid} on {date}: {e}")
 
 with open("epg_data/merged_epg.xml", "wb") as f:
     ET.ElementTree(tv).write(f, encoding="utf-8", xml_declaration=True)
