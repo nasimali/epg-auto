@@ -35,7 +35,7 @@ jobs:
         run: python -m py_compile generate_epg.py
 
       - name: 🧹 Lint code with Ruff
-        run: ruff generate_epg.py
+        run: ruff check .
 
       - name: 🛠️ Run EPG generator script
         run: python generate_epg.py
