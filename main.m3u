@@ -1,23 +1,23 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="3914" tvg-name="Iqra TV Bangla" group-title="Europe Bangla CH" tvg-logo="https://iqra.tv/wp-content/uploads/2019/12/Iqra-Logo-Web-01.png",Iqra TV Bangla
-https://cd198.anystream.uk:8082/hls/iq53la/index.m3u8
+https://cd198.anystream.uk:9092/iqapp/iq53la/chunks.m3u8
 #EXTINF:-1 tvg-id="6753" tvg-name="ATN Bangla UK" group-title="Europe Bangla CH" tvg-logo="https://image.winudf.com/v2/image/Y29tLm1jYy5hdG5iYW5nbGF1a2xpdmVfaWNvbl8wXzVkMzEwZGJh/icon.png?w=184&fakeurl=1",ATN Bangla UK
-https://cd198.anystream.uk:8082/hls/atbla85tv/4_5/index.m3u8
+https://cd198.anystream.uk:9092/iqapp/atbla85tv/chunks.m3u8
 #EXTINF:-1 tvg-id="5426" tvg-name="TV One" group-title="Europe Bangla CH" tvg-logo="https://www.tvoneuk.tv/wp-content/uploads/2021/06/TVONE-LOGO-Colour.png",TV One
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/playlist.m3u8
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/tvoneuksni.stream/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="3815" tvg-name="CH S TV" group-title="Europe Bangla CH" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Channel_S_Logo.SVG/800px-Channel_S_Logo.SVG.png",CH S TV
-https://cd198.anystream.uk:8082/hls/tvchsuk03/2_1/index.m3u8?tkn=3663572900
+https://cd198.anystream.uk:9092/web/tvchsuk03/chunks.m3u8
 #EXTINF:-1 tvg-id="4540" tvg-name="NTV UK" group-title="Europe Bangla CH" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/NTV_%28Bangladesh%29_logo.svg/1200px-NTV_%28Bangladesh%29_logo.svg.png",NTV UK
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ntvuk00332211.stream/playlist.m3u8
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ntvuk00332211.stream/tracks-v1a1/mono.m3u8?wmsAuthSign=
 #EXTINF:-1 tvg-id="4461" tvg-name="ION TV" group-title="Europe Bangla CH" tvg-logo="https://res.cloudinary.com/clearlink/image/upload/f_auto,q_auto/w_640,h_400/v1589301664/Dish/images/isolated/~png-logo-exports-for-channel-page-hero/Ion-Default-Black_2x_ty12yi.png",ION TV
-https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/iontvuk.stream/playlist.m3u8
+https://static.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/iontvuk.stream/tracks-v1a1/mono.m3u8?wmsAuthSign=
 #EXTINF:-1 tvg-id="1104" tvg-name="Islam Channel Bangla" tvg-logo="https://www.islamchanneleid.com/img/client_logos/icBan.png" group-title="Religious",Islam Ch Bangla
 https://live-islamtv-bangla.simplestreamcdn.com/live12/islamtv_bangla/bitrate1.isml/bitrate1-audio_0=128000-video=2406976.m3u8
 #EXTINF:-1 tvg-id="3111" tvg-name="Eman Channel" tvg-logo="https://i.imgur.com/ugn0DWe.png" group-title="Religious",Eman Channel
 https://cd198.anystream.uk:8082/hls/emnhdweb/2_1/index.m3u8
 #EXTINF:-1 tvg-id="1235" tvg-name="Deen TV" group-title="Religious" tvg-logo="https://deentv.uk/wp-content/uploads/2025/04/DENE-TV-LOGO-FOR-QR-1.png",Deen TV
-https://cd198.anystream.uk:8082/hls/d33ntv/index.m3u8
+https://cd198.anystream.uk:9092/iqapp/d33ntv/chunks.m3u8
 #EXTINF:-1 tvg-id="5205" tvg-name="HUM EUROPE" group-title="Entertainment" tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png",HUM TV
-https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
+https://cdn23lhr.tamashaweb.com:8087/jazzauth/humTV-abr/live/vsat-humtv-M/chunks.m3u8?nimblesessionid=5773086&wmsAuthSign=c2VydmVyX3RpbWU9NC8xMi8yMDI2IDE6Mjc6MzQgUE0maGFzaF92YWx1ZT15QkJXMXVaQkpkWmxvZkNDQjdFdGVnPT0mdmFsaWRtaW51dGVzPTYw:8087/jazzauth/humTV-abr/playlist.m3u8
 #EXTINF:-1 tvg-id="4110" tvg-name="Geo TV" group-title="Entertainment" tvg-logo="https://cdn.skymedia.co.uk/wp-content/uploads/2017/12/Geo-TV.png",Geo TV
-https://jk3lz82elw79-hls-live.5centscdn.com/newgeonews/07811dc6c422334ce36a09ff5cd6fe71.sdp/playlist.m3u8
+https://jk3lz82elw79-hls-live.5centscdn.com/harPalGeo/955ad3298db330b5ee880c2c9e6f23a0.sdp/chunks.m3u8
