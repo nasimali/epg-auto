@@ -1,9 +1,10 @@
+import json
 import os
-import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
+
 import pytz
-import json
+import requests
 
 os.makedirs("epg_data", exist_ok=True)
 
@@ -42,7 +43,9 @@ for sid in sids:
             events = schedule[0]["events"]
 
             for ev in events:
-                start = datetime.fromtimestamp(ev["st"] + (3600 if TIMEZONE.localize(datetime.fromtimestamp(ev["st"])).dst().total_seconds() != 0 else 0), tz=TIMEZONE)
+                dt_check = datetime.fromtimestamp(ev["st"], tz=TIMEZONE)
+                offset = 3600 if dt_check.dst().total_seconds() != 0 else 0
+                start = datetime.fromtimestamp(ev["st"] + offset, tz=TIMEZONE)
                 end = start + timedelta(seconds=ev["d"])
                 start_str = start.strftime('%Y%m%d%H%M%S %z')
                 end_str = end.strftime('%Y%m%d%H%M%S %z')
@@ -67,7 +70,7 @@ for sid in sids:
                 if ev.get("new"):
                     ET.SubElement(prog, "new")  
 
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"Failed to fetch or parse EPG for {sid} on {date}: {e}")
 
 with open("epg_data/merged_epg.xml", "wb") as f:
